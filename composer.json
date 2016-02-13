@@ -1,0 +1,24 @@
+{
+  "name": "ptibbetts/allusion",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "description": "Theme for my personal website https://paultibbetts.uk",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    {
+      "name": "Paul Tibbetts",
+      "email": "email@paultibbetts.uk",
+      "homepage": "https://paultibbetts.uk"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "support": {
+    "issues": "https://github.com/ptibbetts/allusion/issues"
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "composer/installers": "~1.0"
+  }
+}
