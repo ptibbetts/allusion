@@ -9,5 +9,3 @@
 \- says [Wikipedia](https://en.wikipedia.org/wiki/Allusion)
 
 Allusion is also the name of the WordPress theme in use on [my personal WordPress site](https://paultibbetts.uk).
-
-It's a work-in-progress and [has a few things left to be completed](https://github.com/ptibbetts/allusion/issues/1) before it hits 1.0.
