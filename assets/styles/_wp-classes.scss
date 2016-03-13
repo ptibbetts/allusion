@@ -1,6 +1,10 @@
 // WordPress Generated Classes
 // http://codex.wordpress.org/CSS#WordPress_Generated_Classes
 
+$line-height-computed: 20px;
+$screen-sm-min: 45rem;
+$thumbnail-caption-padding: 9px;
+
 // Media alignment
 .alignnone {
   margin-left: 0;
@@ -32,7 +36,14 @@
 
 // Captions
 .wp-caption {
-  @extend .thumbnail;
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.428571429;
+  background-color: #fff;
+  border:1px solid  #ddd;
+  border-radius: 4px;
+  transition:border .2s ease-in-out
 }
 .wp-caption-text {
   padding: $thumbnail-caption-padding;
@@ -40,6 +51,22 @@
 
 // Text meant only for screen readers
 .screen-reader-text {
-  @extend .sr-only;
-  @extend .sr-only-focusable;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
 }
