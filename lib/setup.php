@@ -38,7 +38,7 @@ function setup() {
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
-  add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']);
+  add_theme_support('post-formats', ['aside', 'link']);
 
   // Enable HTML5 markup support
   // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
@@ -86,6 +86,10 @@ function display_sidebar() {
     is_404(),
     is_front_page(),
     is_page_template('template-custom.php'),
+    is_page(),
+    is_single(),
+    is_home(),
+    is_archive()
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
