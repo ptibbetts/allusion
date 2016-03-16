@@ -18,6 +18,11 @@
     </div>
   <?php endif; ?>
 
+  <span class="Post-byline">by
+    <a href="https://paultibbetts.uk" class="p-author h-card">
+      <img src="https://secure.gravatar.com/avatar/36790fabdc80d52c19e45c2df8acb55a" alt="Paul Tibbetts" class="u-photo">
+    </a>
+  </span>
 
   <?php $tags = get_the_tags(); if ($tags) : ?>
     <div class="Post-tagsContainer">

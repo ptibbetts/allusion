@@ -12,18 +12,20 @@
 				Hi, I'm <a href="<?= get_home_url(); ?>" class="u-url u-uid p-name">Paul Tibbetts</a>
 			</h1>
 
-			<p>
-				I'm a <span class="p-job-title">front end developer</span> at
-				<a href="https://thebluecube.com" class="p-org h-card">The Blue Cube</a>
-				 in the Jewellery Quarter, <span class="p-locality">Birmingham</span>
-				 <span class="p-country-name">UK</span>
-			</p>
+			<span class="p-note">
+				<p>
+					I'm a <span class="p-job-title">front end developer</span> at
+					<a href="https://thebluecube.com" class="p-org h-card">The Blue Cube</a>
+					 in the Jewellery Quarter, <span class="p-locality">Birmingham</span>
+					 <span class="p-country-name">UK</span>
+				</p>
 
-			<p>
-				I write both <a href="<?= get_permalink(get_option('page_for_posts' )); ?>">long</a> and
-				<a href="<?= get_post_format_link('aside'); ?>">short</a> things as well as
-				<a href="<?= get_post_format_link('link'); ?>">share links</a> to stuff
-			</p>
+				<p>
+					I write both <a href="<?= get_permalink(get_option('page_for_posts' )); ?>">long</a> and
+					<a href="<?= get_post_format_link('aside'); ?>">short</a> things as well as
+					<a href="<?= get_post_format_link('link'); ?>">share links</a> to stuff
+				</p>
+			</span>
 
 			<p>
 				<a href="mailto:email@paultibbetts.uk" class="u-email">email@paultibbetts.uk</a>
