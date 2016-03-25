@@ -22,8 +22,8 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/introduction');
     } ?>
     <main class="main">
-      <div class="row">
-        <div class="container">
+      <div class="u-mt++">
+        <div class="l-container">
           <?php include Wrapper\template_path(); ?>
         </div>
       </div>
