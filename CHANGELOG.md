@@ -1,3 +1,8 @@
+## 1.1.0 2016-03-25
+### Changed
+- Updated toolkit to version 2 which uses namespaces on the classes
+- changed classes to match
+
 ## 1.0.4 2016-03-16
 ### Added
 - p-note to homepage h-card
