@@ -2,6 +2,10 @@
 // bower:scss
 // endbower
 
-@import "node_modules/styles-paultibbetts-uk/dist/assets/toolkit/styles/toolkit";
+@import "node_modules/styles-paultibbetts-uk/dist/assets/toolkit/styles/generic";
+@import "node_modules/styles-paultibbetts-uk/dist/assets/toolkit/styles/base";
+@import "node_modules/styles-paultibbetts-uk/dist/assets/toolkit/styles/objects";
+@import "node_modules/styles-paultibbetts-uk/dist/assets/toolkit/styles/components";
+@import "node_modules/styles-paultibbetts-uk/dist/assets/toolkit/styles/utilities";
 @import "wp-classes";
 @import "tinymce";

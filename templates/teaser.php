@@ -1,12 +1,12 @@
-<div class="teaser">
+<div class="o-teaser">
 
-  <a href="<?= get_permalink(); ?>" class="teaser-link">
+  <a href="<?= get_permalink(); ?>" class="o-teaser-link">
 
     <?= get_the_title(); ?>
 
-    <div class="teaser-meta">
+    <div class="o-teaser-meta">
 
-      <time class="timestamp dt-published"
+      <time class="o-timestamp dt-published"
         datetime="<?= get_post_time('c', true); ?>">
         <?= human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'; ?>
       </time>
@@ -14,7 +14,7 @@
       <?php
       $tags = get_the_tags();
       if ($tags) :
-        echo '<ul class="inline-list">';
+        echo '<ul class="u-listInline">';
         foreach ($tags as $tag ) :
           echo '<li>#'. $tag->name .'</li> ';
         endforeach;

@@ -14,7 +14,7 @@ class NavigationClassWalker extends \Walker_Nav_Menu {
 
   public function cssClasses($classes, $item) {
 
-    $classes[] = 'Navigation-listItem';
+    $classes[] = 'c-Navigation-listItem';
 
     $classes = array_unique($classes);
     $classes = array_map('trim', $classes);

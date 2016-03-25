@@ -24,16 +24,16 @@ $args = array(
 $posts = new WP_Query( $args );
 
 if ( $posts->have_posts() ) : ?>
-<div class="Posts Posts--recent">
-	<h2 class="Posts-header">Latest Articles</h2>
-	<ul class="list-of-links">
+<div class="c-Posts c-Posts--recent">
+	<h2 class="c-Posts-header">Latest Articles</h2>
+	<ul class="o-listOfLinks">
 		<?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
 			<li><?php get_template_part('templates/teaser');?></li>
 		<?php endwhile; ?>
 	</ul>
 
 	<a href="<?= get_permalink(get_option('page_for_posts' )); ?>"
-		class="Posts-allLink">
+		class="c-Posts-allLink">
 		All Articles
 	</a>
 
