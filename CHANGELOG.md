@@ -1,3 +1,7 @@
+## 1.1.1 2016-03-27
+### Changed
+- updated toolkit to 2.0.1, reworded introduction
+
 ## 1.1.0 2016-03-25
 ### Changed
 - Updated toolkit to version 2 which uses namespaces on the classes
