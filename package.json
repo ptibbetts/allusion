@@ -1,7 +1,7 @@
 {
   "name": "allusion",
-  "version": "1.0.3",
-  "author": "Paul Tibbetts <email@paultibbetts.uk>",
+  "version": "1.2.0",
+  "author": "Paul Tibbetts <code@paultibbetts.uk>",
   "homepage": "https://github.com/ptibbetts/allusion",
   "private": true,
   "repository": {
