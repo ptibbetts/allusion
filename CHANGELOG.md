@@ -1,3 +1,14 @@
+# Change Log
+
+## 1.2.0 2016-06-25
+### Added
+- added system font to tinymce
+- added Advanced Custom fields, using it in the intro
+
+### Changed
+- added /vendor folder to gitignore
+- widened container from 42rem to 45rem to fit new job title
+
 ## 1.0.4 2016-03-16
 ### Added
 - p-note to homepage h-card
