@@ -1,66 +1,104 @@
+<?php
+
+$image = get_field('image');
+$user_id = 1;
+$user = array_map( function( $a ){ return $a[0]; }, get_user_meta( $user_id ) );
+
+?>
+
 <section class="c-Introduction h-card">
 
 	<div class="l l-container l--g u-flexJustify--between">
 
 		<div class="l-i u-1/5">
-			<img src="https://en.gravatar.com/userimage/7483785/89659c7a29dc4fac894c9d7b8f8d378d.jpg?size=200"
-			alt="my face" class="c-Introduction-image u-photo">
+			<?php if ($image) : ?>
+				<img src="<?= $image['url']; ?>"
+						 alt="<?= $image['alt']; ?>"
+						 class="c-Introduction-image u-photo"
+				>
+			<?php endif; ?>
 		</div>
 
 		<div class="l-i u-7/10">
 			<div class="c-Introduction-text">
 				<h1>
-					Hi, I'm <a href="<?= get_home_url(); ?>" class="u-url u-uid p-name">Paul Tibbetts</a>
+					Hi, I'm
+					<a href="<?= get_home_url(); ?>" class="u-url u-uid p-name">
+						<?= $user['first_name'] . ' ' . $user['last_name']; ?>
+					</a>
 				</h1>
 
-				<p class="p-note">
-					I'm a <span class="p-job-title">front end developer</span> at
-					<a href="https://thebluecube.com" class="p-org h-card">The Blue Cube</a>
-					 in the Jewellery Quarter, <span class="p-locality">Birmingham</span>,
-					 <span class="p-country-name">UK</span>.
-				</p>
+        <?php if (get_field('note')) : ?>
+  				<p class="p-note">
+  				  <?= get_field('note'); ?>
+  				</p>
+        <?php endif; ?>
 
-				<p>
-					You've found my website where I post
-					<a href="<?= get_permalink(get_option('page_for_posts' )); ?>">articles</a>
-					I've written, as well as my <a href="<?= get_post_format_link('aside'); ?>">notes</a>
-					and <a href="<?= get_post_format_link('link'); ?>">links</a> to
-					things I find on the web.
-				</p>
+        <?php if (get_field('locality')) : ?>
+  				<p>
+  				  <?= get_field('locality'); ?>
+  				</p>
+        <?php endif; ?>
 
-				<p>
-					You can read more about me on the <a href="<?= get_permalink(get_page_by_title('about')); ?>">about</a> page.
-				</p>
+        <?php if (get_field('introduction')) : ?>
+          <p>
+            <?= get_field('introduction'); ?>
+          </p>
+        <?php endif; ?>
 
-				<p>
-					<a href="mailto:email@paultibbetts.uk" class="u-email">email@paultibbetts.uk</a>
-				</p>
+
+        <?php if (get_field('email')) : ?>
+  				<p>
+            <a href="mailto:<?= get_field('email'); ?>">
+              <?= get_field('email'); ?>
+            </a>
+  				</p>
+        <?php endif; ?>
 
 				<ul class="c-SocialList u-listInline">
-					<li class="c-SocialList-item">
-						<a href="https://twitter.com/paul_tibbetts" rel="me">Twitter</a>
-					</li>
-					<li class="c-SocialList-item">
-						<a href="https://talk.birmingham.io/users/paul_tibbetts" rel="me">Birmingham.io</a>
-					</li>
-					<li class="c-SocialList-item">
-						<a href="https://instagram.com/ptibbetts" rel="me">Instagram</a>
-					</li>
-					<li class="c-SocialList-item">
-						<a href="https://github.com/ptibbetts" rel="me">GitHub</a>
-					</li>
-					<li class="c-SocialList-item">
-						<a href="https://medium.com/@paul_tibbetts" rel="me">Medium</a>
-					</li>
-					<li class="c-SocialList-item">
-						<a href="http://codepen.io/ptibbetts/" rel="me">Codepen</a>
-					</li>
-					<li class="c-SocialList-item">
-						<a href="http://www.meetup.com/members/162336332/" rel="me">Meetup</a>
-					</li>
-					<li class="c-SocialList-item">
-						<a href="https://uk.linkedin.com/in/paultibbetts" rel="me">LinkedIn</a>
-					</li>
+
+          <?php if (get_field('twitter')) : ?>
+  					<li class="c-SocialList-item">
+  						<a href="https://twitter.com/<?= get_field('twitter'); ?>" rel="me">Twitter</a>
+  					</li>
+          <?php endif; ?>
+
+          <?php if (get_field('birmingham_io')) : ?>
+  					<li class="c-SocialList-item">
+  						<a href="<?= get_field('birmingham_io'); ?>" rel="me">Birmingham.io</a>
+  					</li>
+          <?php endif; ?>
+
+          <?php if (get_field('instagram')) : ?>
+  					<li class="c-SocialList-item">
+  						<a href="<?= get_field('instagram'); ?>" rel="me">Instagram</a>
+  					</li>
+          <?php endif; ?>
+
+          <?php if (get_field('github')) : ?>
+  					<li class="c-SocialList-item">
+  						<a href="https://github.com/<?= get_field('github'); ?>" rel="me">GitHub</a>
+  					</li>
+          <?php endif; ?>
+
+          <?php if (get_field('medium')) : ?>
+  					<li class="c-SocialList-item">
+  						<a href="<?= get_field('medium'); ?>" rel="me">Medium</a>
+  					</li>
+          <?php endif; ?>
+
+          <?php if (get_field('codepen')) : ?>
+  					<li class="c-SocialList-item">
+  						<a href="<?= get_field('codepen'); ?>" rel="me">Codepen</a>
+  					</li>
+          <?php endif; ?>
+
+          <?php if (get_field('linkedin')) : ?>
+  					<li class="c-SocialList-item">
+  						<a href="https://<?= get_field('linkedin'); ?>" rel="me">LinkedIn</a>
+  					</li>
+          <?php endif; ?>
+
 				</ul>
 
 			</div>
