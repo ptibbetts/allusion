@@ -9,6 +9,15 @@
 - added /vendor folder to gitignore
 - widened container from 42rem to 45rem to fit new job title
 
+## 1.1.1 2016-03-27
+### Changed
+- updated toolkit to 2.0.1, reworded introduction
+
+## 1.1.0 2016-03-25
+### Changed
+- Updated toolkit to version 2 which uses namespaces on the classes
+- changed classes to match
+
 ## 1.0.4 2016-03-16
 ### Added
 - p-note to homepage h-card
