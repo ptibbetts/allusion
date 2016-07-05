@@ -29,4 +29,5 @@ if ( $posts->have_posts() ) : ?>
 		</a>
 
 	</div>
+	
 <?php endif; wp_reset_postdata(); ?>
