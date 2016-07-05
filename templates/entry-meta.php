@@ -10,7 +10,7 @@
 
   <?php if (get_the_date() !== get_the_modified_date()) : ?>
     <div>
-      <span class="c-Post-metaName">Last updated:</span>
+      <span class="c-Post-metaName">Updated:</span>
       <time class="o-timestamp dt-published"
         datetime="<?= get_post_time('c', true); ?>">
         <?= get_the_modified_date(); ?> at <?= get_the_modified_time(); ?>
