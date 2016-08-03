@@ -24,26 +24,34 @@ $user = array_map( function( $a ){ return $a[0]; }, get_user_meta( $user_id ) );
 				<h1>
 					Hi, I'm
 					<a href="<?= get_home_url(); ?>" class="u-url u-uid p-name">
-						<?= $user['first_name'] . ' ' . $user['last_name']; ?>
+						<?= $user['first_name'].' '.$user['last_name']; ?>
 					</a>
 				</h1>
 
-        <?php if (get_field('note')) : ?>
-  				<p class="p-note">
-  				  <?= get_field('note'); ?>
-  				</p>
-        <?php endif; ?>
+				<div class="p-note">
 
-        <?php if (get_field('locality')) : ?>
-  				<p>
-  				  <?= get_field('locality'); ?>
-  				</p>
-        <?php endif; ?>
+	        <?php if (get_field('note')) : ?>
+  				  <?= get_field('note'); ?>
+	        <?php endif; ?>
+
+	        <?php if (get_field('locality')) : ?>
+	  				<div class="p-locality">
+	  				  <?= get_field('locality'); ?>
+	  				</div>
+	        <?php endif; ?>
+
+					<?php if (get_field('country_name')) : ?>
+	  				<div class="p-country-name" style="display: none;">
+	  				  <?= get_field('country_name'); ?>
+	  				</div>
+	        <?php endif; ?>
+
+				</div>
 
         <?php if (get_field('introduction')) : ?>
-          <p>
+          <div>
             <?= get_field('introduction'); ?>
-          </p>
+          </div>
         <?php endif; ?>
 
 

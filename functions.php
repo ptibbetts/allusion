@@ -66,6 +66,15 @@ if(function_exists("register_field_group"))
 				'toolbar' => 'full',
 				'media_upload' => 'yes',
 			),
+      array (
+				'key' => 'field_576e5c04a32fe',
+				'label' => 'Country Name',
+				'name' => 'country_name',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
 			array (
 				'key' => 'field_576e5c0da32f5',
 				'label' => 'Introduction',
