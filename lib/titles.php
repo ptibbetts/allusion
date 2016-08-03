@@ -12,6 +12,8 @@ function title() {
     } else {
       return __('Latest Posts', 'sage');
     }
+  } elseif (is_tag()) {
+     return sprintf( __( '#%s' ), single_tag_title( '', false ) );
   } elseif (is_archive()) {
     return get_the_archive_title();
   } elseif (is_search()) {
