@@ -8,4 +8,6 @@
 
 \- says [Wikipedia](https://en.wikipedia.org/wiki/Allusion)
 
-Allusion is also the name of the WordPress theme in use on [my personal WordPress site](https://paultibbetts.uk).
+Allusion is also the name of the WordPress theme in use on [my personal WordPress site](https://paultibbetts.uk)
+
+I forked it from [Sage](https://roots.io/sage)
