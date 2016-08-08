@@ -35,6 +35,7 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+  add_image_size( 'optimised', 800, 600 );
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
@@ -49,6 +50,13 @@ function setup() {
   add_editor_style(Assets\asset_path('styles/main.css'));
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
+
+function allow_optimised_image_size_to_be_selectable( $sizes ) {
+  return array_merge( $sizes, array(
+    'optimised' => __( 'Optimised' ),
+  ) );
+}
+add_filter( 'image_size_names_choose',__NAMESPACE__.'\\allow_optimised_image_size_to_be_selectable' );
 
 /**
  * Register sidebars

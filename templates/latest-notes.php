@@ -17,11 +17,9 @@ if ( $posts->have_posts() ) : ?>
 
 	<div class="c-Posts c-Posts--recent">
 		<h2 class="c-Posts-header">Latest Notes</h2>
-		<ul class="o-listOfLinks">
 			<?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
-				<li><?php get_template_part('templates/teaser');?></li>
+				<?php get_template_part('templates/content-note');?>
 			<?php endwhile; ?>
-		</ul>
 
 		<a href="<?= get_post_format_link('aside'); ?>"
 			class="c-Posts-allLink">
@@ -29,5 +27,5 @@ if ( $posts->have_posts() ) : ?>
 		</a>
 
 	</div>
-	
+
 <?php endif; wp_reset_postdata(); ?>

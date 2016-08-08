@@ -1,4 +1,4 @@
-<div class="c-Post-meta">
+<div class="c-Post-meta u-mb">
 
   <div>
     <span class="c-Post-metaName">Published:</span>

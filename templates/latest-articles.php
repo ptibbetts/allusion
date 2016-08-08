@@ -28,7 +28,7 @@ if ( $posts->have_posts() ) : ?>
 	<h2 class="c-Posts-header">Latest Articles</h2>
 	<ul class="o-listOfLinks">
 		<?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
-			<li><?php get_template_part('templates/teaser');?></li>
+			<li><?php get_template_part('templates/teaser-excerpt');?></li>
 		<?php endwhile; ?>
 	</ul>
 
