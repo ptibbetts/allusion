@@ -18,7 +18,7 @@ if ( $posts->have_posts() ) : ?>
 	<div class="c-Posts c-Posts--recent">
 		<h2 class="c-Posts-header">Latest Notes</h2>
 			<?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
-				<?php get_template_part('templates/content-note');?>
+				<?php get_template_part('templates/content-single-aside');?>
 			<?php endwhile; ?>
 
 		<a href="<?= get_post_format_link('aside'); ?>"

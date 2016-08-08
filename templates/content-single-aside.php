@@ -22,14 +22,18 @@ endif;
       'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'),
       'after' => '</p></nav>'
     ]); ?>
-    <div class="c-Post-meta" style="margin-bottom:3rem">
-      <a href="<?= get_permalink(); ?>">
-        <span class="c-Post-metaName">Published:</span>
-        <time class="o-timestamp dt-published"
-          datetime="<?= get_post_time('c', true); ?>">
-          <?= get_the_date(); ?> at <?= get_the_time(); ?>
-        </time>
-      </a>
-    </div>
+    <?php if (!is_single()) : ?>
+      <div class="c-Post-meta" style="margin-bottom:3rem">
+        <a href="<?= get_permalink(); ?>">
+          <span class="c-Post-metaName">Published:</span>
+          <time class="o-timestamp dt-published"
+            datetime="<?= get_post_time('c', true); ?>">
+            <?= get_the_date(); ?> at <?= get_the_time(); ?>
+          </time>
+        </a>
+      </div>
+    <?php else: ?>
+      <?php get_template_part('templates/entry-meta'); ?>
+    <?php endif; ?>
   </footer>
 </article>
