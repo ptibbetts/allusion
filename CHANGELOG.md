@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.3.0 2016-08-08
+### Changed
+- changed notes to display in full and centered things on the homepage
+
 ## 1.2.0 2016-06-25
 ### Added
 - added system font to tinymce
