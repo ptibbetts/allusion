@@ -1,5 +1,10 @@
 # Change Log
 
+## 1.3.1 2016-08-08
+### Changes
+- changes note meta info to permalink
+- displays note content as title if no title is present
+
 ## 1.3.0 2016-08-08
 ### Changed
 - changed notes to display in full and centered things on the homepage
