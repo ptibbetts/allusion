@@ -1,5 +1,10 @@
 # Change Log
 
+## 1.3.4 2016-08-09
+### Fixes
+- fixes tag page display of all items
+
+
 ## 1.3.1 2016-08-08
 ### Changes
 - changes note meta info to permalink
