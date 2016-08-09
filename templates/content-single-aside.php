@@ -25,11 +25,20 @@ endif;
     <?php if (!is_single()) : ?>
       <div class="c-Post-meta" style="margin-bottom:3rem">
         <a href="<?= get_permalink(); ?>">
-          <span class="c-Post-metaName">Published:</span>
           <time class="o-timestamp dt-published"
             datetime="<?= get_post_time('c', true); ?>">
-            <?= get_the_date(); ?> at <?= get_the_time(); ?>
+            <?= human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'; ?>
           </time>
+          <?php
+          $tags = get_the_tags();
+          if ($tags) :
+            echo '<ul class="u-listInline">';
+            foreach ($tags as $tag ) :
+              echo '<li>#'. $tag->name .'</li> ';
+            endforeach;
+            echo '</ul>';
+          endif;
+          ?>
         </a>
       </div>
     <?php else: ?>
