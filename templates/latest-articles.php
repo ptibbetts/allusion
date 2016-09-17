@@ -1,7 +1,7 @@
 <?php
 $args = array(
 	'post_type' => 'post',
-  'posts_per_page' => 5,
+  'posts_per_page' => 3,
 	'tax_query' => array(
 		array(
 			'taxonomy' => 'post_format',
@@ -26,11 +26,11 @@ $posts = new WP_Query( $args );
 if ( $posts->have_posts() ) : ?>
 <div class="c-Posts c-Posts--recent">
 	<h2 class="c-Posts-header">Latest Articles</h2>
-	<ul class="o-listOfLinks">
 		<?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
-			<li><?php get_template_part('templates/teaser-excerpt');?></li>
+      <div style="margin-bottom:2rem">
+        <?php get_template_part('templates/teaser-article');?>
+      </div>
 		<?php endwhile; ?>
-	</ul>
 
 	<a href="<?= get_permalink(get_option('page_for_posts' )); ?>"
 		class="c-Posts-allLink">

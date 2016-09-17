@@ -1,7 +1,7 @@
 <?php
 $args = array(
 	'post_type' => 'post',
-	'posts_per_page' => 5,
+	'posts_per_page' => 10,
 	'tax_query' => array(
 		array(
 			'taxonomy' => 'post_format',
@@ -19,7 +19,7 @@ if ( $posts->have_posts() ) : ?>
 	  <h2 class="c-Posts-header">Latest Links</h2>
 		<ul class="o-listOfLinks">
 		  <?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
-		    <li><?php get_template_part('templates/teaser-excerpt');?></li>
+		    <li><?php get_template_part('templates/teaser');?></li>
 		  <?php endwhile; ?>
 		</ul>
 

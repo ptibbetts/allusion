@@ -1,22 +1,21 @@
-<?php
-if (get_the_title() != '') :
-  $title = get_the_title();
-  $display_content = true;
-else:
-  $title = get_the_content();
-  $display_content = false;
-endif;
-?>
-
 <article <?php post_class('h-entry'); ?>>
-  <header>
-    <h1 class="p-name">
-      <?= $title; ?>
-    </h1>
-  </header>
-  <div class="e-content" <?php echo (!$display_content ? 'style="display:none"' : ''); ?>>
-    <?php the_content(); ?>
-  </div>
+  <?php if (get_the_title() != '') : ?>
+    <header>
+      <h1 class="p-name">
+        <?= $title; ?>
+      </h1>
+    </header>
+    <div class="e-content">
+      <?php the_content(); ?>
+    </div>
+  <?php else: ?>
+    <header>
+      <h1 class="p-name e-content">
+        <?php the_content(); ?>
+      </h1>
+    </header>
+  <?php endif; ?>
+
   <footer>
     <?php wp_link_pages([
       'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'),

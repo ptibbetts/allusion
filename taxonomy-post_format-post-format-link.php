@@ -17,11 +17,11 @@
 
         if($current_year != $old_date) {
             echo '</ul>';
-            echo '<h3>'.$current_year.'</h3>';
+            echo '<h3 style="text-align:right">'.$current_year.'</h3>';
             echo '<ul class="o-listOfLinks">';
         }
     }else{
-        echo '<h3>'.$current_year.'</h3>';
+        echo '<h3 style="text-align:right">'.$current_year.'</h3>';
     } ?>
       <?php get_template_part('templates/teaser'); ?>
   <?php endwhile; ?>
