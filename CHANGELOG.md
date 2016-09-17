@@ -1,9 +1,16 @@
 # Change Log
 
+## 1.4.0 2016-09-17
+### Changes
+- changes templates to bring more consistency to them. adds teaser-article
+
+## 1.3.5 2016-08-16
+### Fixes
+- fixes notes to display # time ago
+
 ## 1.3.4 2016-08-09
 ### Fixes
 - fixes tag page display of all items
-
 
 ## 1.3.1 2016-08-08
 ### Changes
