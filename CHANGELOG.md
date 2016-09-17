@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.4.1 2016-09-17 moments later
+### Fixes
+- fixes title not appearing on notes
+
 ## 1.4.0 2016-09-17
 ### Changes
 - changes templates to bring more consistency to them. adds teaser-article

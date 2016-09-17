@@ -2,7 +2,7 @@
   <?php if (get_the_title() != '') : ?>
     <header>
       <h1 class="p-name">
-        <?= $title; ?>
+        <?= the_title(); ?>
       </h1>
     </header>
     <div class="e-content">
