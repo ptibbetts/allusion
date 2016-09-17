@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.4.2 2016-09-17
+### Fixes
+- fixes links breaking responsive design
+
 ## 1.4.1 2016-09-17 moments later
 ### Fixes
 - fixes title not appearing on notes
