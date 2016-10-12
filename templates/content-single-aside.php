@@ -1,18 +1,26 @@
 <article <?php post_class('h-entry'); ?>>
   <?php if (get_the_title() != '') : ?>
     <header>
-      <h1 class="p-name">
-        <?= the_title(); ?>
-      </h1>
+      <?php if (is_single()) : ?>
+        <h1 class="p-name">
+          <?= the_title(); ?>
+        </h1>
+      <?php else: ?>
+        <h2>
+          <a href="<?php the_permalink(); ?>">
+            <?= the_title(); ?>
+          </a>
+        </h2>
+      <?php endif; ?>
     </header>
     <div class="e-content">
       <?php the_content(); ?>
     </div>
   <?php else: ?>
     <header>
-      <h1 class="p-name e-content">
+      <div class="p-name e-content">
         <?php the_content(); ?>
-      </h1>
+      </div>
     </header>
   <?php endif; ?>
 

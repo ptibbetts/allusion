@@ -1,5 +1,10 @@
 # Change Log
 
+## 1.4.3 2016-10-12
+### Changes
+- reduces size of notes on index page
+- adds links to titles on index page
+
 ## 1.4.2 2016-09-17
 ### Fixes
 - fixes links breaking responsive design

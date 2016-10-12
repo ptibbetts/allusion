@@ -1,8 +1,10 @@
 <article <?php post_class('h-entry'); ?>>
   <header>
-    <h1 class="p-name">
-      <?php the_title(); ?>
-    </h1>
+    <h2 class="p-name">
+      <a href="<?php the_permalink(); ?>">
+        <?php the_title(); ?>
+      </a>
+    </h2>
   </header>
   <div class="p-summary">
     <?php the_excerpt(); ?>
