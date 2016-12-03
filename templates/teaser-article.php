@@ -7,7 +7,7 @@
     </h2>
   </header>
   <div class="p-summary">
-    <?php the_excerpt(); ?>
+    <?php the_content(); ?>
   </div>
   <footer>
     <?php wp_link_pages([

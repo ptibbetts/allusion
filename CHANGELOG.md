@@ -1,5 +1,10 @@
 # Change Log
 
+## 1.4.4 2016-12-03
+### Changes
+- article teaser now uses `the_content` instead of `the_excerpt` as it formats
+content before the more tag better
+
 ## 1.4.3 2016-10-12
 ### Changes
 - reduces size of notes on index page
