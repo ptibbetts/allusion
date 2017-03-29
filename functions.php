@@ -200,3 +200,19 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+
+
+/**
+ * Shortcode for page last updated snippet
+ * Usage:
+ * [last-updated]
+ * Credit: Marc Jenkins marc@marcjenkins.com
+ */
+
+function origin_sc_page_last_updated( $atts, $content = null ) {
+	global $post;
+	$lastUpdated = get_the_modified_time( 'F jS, Y', $post->ID );
+	return '<p><strong>Last updated:</strong> ' . $lastUpdated . '.</p>';
+}
+
+add_shortcode( 'last-updated', 'origin_sc_page_last_updated' );

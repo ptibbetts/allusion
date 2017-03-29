@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.5.0 2017-03-29
+### Adds
+- [last-updated] shortcode for the Now page - code from [Marc Jenkins](https://marcjenkins.com)
+
 ## 1.4.4 2016-12-03
 ### Changes
 - article teaser now uses `the_content` instead of `the_excerpt` as it formats
